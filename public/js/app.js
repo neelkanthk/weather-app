@@ -7,7 +7,7 @@ weatherForm.addEventListener('submit', (event) => {
     let location = document.getElementById('location').value
     let forecastParagraph = document.getElementById('forecast')
     forecastParagraph.innerHTML = 'Loading...'
-    fetch('http://localhost:3000/weather?location=' + encodeURIComponent(location)).then((res) => {
+    fetch('/weather?location=' + encodeURIComponent(location)).then((res) => {
     res.json().then((data) => {
         if(data.error)
         {
